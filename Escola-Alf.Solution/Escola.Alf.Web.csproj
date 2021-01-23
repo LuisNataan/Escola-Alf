@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Escola_Alf.Solution</RootNamespace>
+    <RootNamespace>Escola.Alf.Solution</RootNamespace>
   </PropertyGroup>
 
 </Project>

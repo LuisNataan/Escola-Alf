@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Web", "Escola-Alf.Solution\Escola.Alf.Web.csproj", "{57320F5C-1756-4DF2-A707-288D4D3F70AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10} = {7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Web", "1. Web", "{1C963374-2B7B-4C6E-979C-F5A9A714276A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{1388BB43-CB90-447D-B24D-C380161B6E8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Application", "Escola-Alf.Application\Escola.Alf.Application.csproj", "{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57320F5C-1756-4DF2-A707-288D4D3F70AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57320F5C-1756-4DF2-A707-288D4D3F70AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57320F5C-1756-4DF2-A707-288D4D3F70AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57320F5C-1756-4DF2-A707-288D4D3F70AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57320F5C-1756-4DF2-A707-288D4D3F70AF} = {1C963374-2B7B-4C6E-979C-F5A9A714276A}
+		{7E0B2968-4D51-450A-A38C-C1CF6C0B5E10} = {1388BB43-CB90-447D-B24D-C380161B6E8D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68B24D8C-D7CA-4FDF-A168-C1B713E239C3}
+	EndGlobalSection
+EndGlobal
