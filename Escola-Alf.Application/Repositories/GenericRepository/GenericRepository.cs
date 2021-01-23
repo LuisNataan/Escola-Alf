@@ -2,6 +2,7 @@
 using Escola.Alf.Application.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Escola.Alf.Application.Repositories.GenericRepository
@@ -17,34 +18,37 @@ namespace Escola.Alf.Application.Repositories.GenericRepository
             _dbSet = dbContext.Set<TEntity>();
         }
 
-        public Task<TEntity> Create(TEntity entity)
+        public async Task Create(TEntity entity)
         {
-            throw new System.NotImplementedException();
+            await _dbSet.AddAsync(entity);
         }
 
-        public Task<TEntity> Delete(TEntity entity)
+        public async Task Delete(TEntity entity)
         {
-            throw new System.NotImplementedException();
+            _dbSet.Update(entity);
         }
 
-        public Task<IEnumerable<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
-            throw new System.NotImplementedException();
+            return await Query().Where(x => !x.Deletado).ToListAsync();
         }
 
-        public Task<TEntity> GetById(int id)
+        public async Task<TEntity> GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return await _dbSet.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id && !x.Deletado);
         }
 
-        public Task SaveChanges()
+        public async Task SaveChanges()
         {
-            throw new System.NotImplementedException();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<TEntity> Update(TEntity entity)
+        public async Task Update(TEntity entity)
         {
-            throw new System.NotImplementedException();
+            _dbSet.Update(entity);
         }
+
+        public IQueryable<TEntity> Query() => _dbSet.AsNoTracking();
     }
 }
