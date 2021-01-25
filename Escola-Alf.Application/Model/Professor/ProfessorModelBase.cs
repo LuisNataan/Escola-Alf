@@ -2,20 +2,19 @@
 
 namespace Escola.Alf.Application
 {
-    public class ProfessorModel : ModelBase
+    public class ProfessorModelBase
     {
         public string Nome { get; protected set; }
         public string Email { get; protected set; }
         public string Disciplina { get; protected set; }
 
-        public ProfessorModel(ProfessorModel professor)
+        public ProfessorModelBase(ProfessorModelBase professor)
         {
-            Id = professor.Id;
             Nome = professor.Nome;
             Email = professor.Email;
             Disciplina = professor.Disciplina;
         }
-        protected ProfessorModel()
+        protected ProfessorModelBase()
         {
         }
     }

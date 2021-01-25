@@ -1,8 +1,8 @@
 ﻿namespace Escola.Alf.Application.Model.Professor
 {
-    public class ProfessorResponseModel : ProfessorModel
+    public class ProfessorResponseModel : ProfessorModelBase
     {
-        public ProfessorResponseModel(ProfessorModel model)
+        public ProfessorResponseModel(ProfessorModelBase model)
         {
             Id = model.Id;
             Nome = model.Nome;

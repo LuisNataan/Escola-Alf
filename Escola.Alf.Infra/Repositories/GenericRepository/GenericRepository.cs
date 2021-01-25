@@ -1,5 +1,5 @@
 ﻿using Escola.Alf.Application.Interfaces;
-using Escola.Alf.Application.Model;
+using Escola.Alf.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Escola.Alf.Application.Repositories.GenericRepository
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : ModelBase
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         protected readonly MainContext _dbContext;
         protected readonly DbSet<TEntity> _dbSet;

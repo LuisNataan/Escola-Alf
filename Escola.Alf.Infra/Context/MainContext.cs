@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Escola.Alf.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Escola.Alf.Application
@@ -9,7 +10,7 @@ namespace Escola.Alf.Application
         {
         }
 
-        public DbSet<ProfessorModel> Professores { get; set; }
+        public DbSet<Professor> Professores { get; set; }
 
         public MainContext()
         {

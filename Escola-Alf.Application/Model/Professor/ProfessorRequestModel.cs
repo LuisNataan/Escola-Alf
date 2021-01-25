@@ -1,6 +1,6 @@
 ﻿namespace Escola.Alf.Application.Model.Professor
 {
-    public class ProfessorRequestModel : ProfessorModel
+    public class ProfessorRequestModel : ProfessorModelBase
     {
     }
 }
