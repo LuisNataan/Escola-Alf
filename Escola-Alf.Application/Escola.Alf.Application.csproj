@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\Escola.Alf.Infra\Escola.Alf.Infra.csproj" />
   </ItemGroup>
 
 </Project>

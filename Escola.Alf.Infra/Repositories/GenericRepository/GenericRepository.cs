@@ -33,7 +33,7 @@ namespace Escola.Alf.Application.Repositories.GenericRepository
             return await Query().Where(x => !x.Deletado).ToListAsync();
         }
 
-        public async Task<TEntity> GetById(int id)
+        public virtual async Task<TEntity> GetById(int id)
         {
             return await _dbSet.AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id && !x.Deletado);
