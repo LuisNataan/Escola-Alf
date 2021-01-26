@@ -4,7 +4,6 @@
     {
         public ProfessorResponseModel(ProfessorModelBase model)
         {
-            Id = model.Id;
             Nome = model.Nome;
             Email = model.Email;
             Disciplina = model.Disciplina;

@@ -1,4 +1,5 @@
 ﻿using Escola.Alf.Domain.ComplexType;
+using Escola.Alf.Domain.VO;
 using System.Collections.Generic;
 
 namespace Escola.Alf.Domain.Entities
@@ -10,6 +11,13 @@ namespace Escola.Alf.Domain.Entities
         public string Disciplina { get; protected set; }
         public virtual Prova Prova { get; protected set; }
         public List<Prova> Provas { get; protected set; }
+
+        public Professor(ProfessorVO professorVO)
+        {
+            Nome = professorVO.Nome;
+            Email = professorVO.Email;
+            Disciplina = professorVO.Disciplina;
+        }
 
         protected Professor()
         {

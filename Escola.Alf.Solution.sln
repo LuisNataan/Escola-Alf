@@ -16,15 +16,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Application", "E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{C9EE47EE-EC83-4985-B138-173B26289DBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escola.Alf.Domain", "Escola.Alf.Domain\Escola.Alf.Domain.csproj", "{C1369119-C9BB-4EA6-9824-6DAF7775C49B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Domain", "Escola.Alf.Domain\Escola.Alf.Domain.csproj", "{C1369119-C9BB-4EA6-9824-6DAF7775C49B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infra", "4. Infra", "{3FAA9469-EA50-4801-B82D-A397C638900E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escola.Alf.Infra", "Escola.Alf.Infra\Escola.Alf.Infra.csproj", "{2D3200F8-DAC0-4F0A-BA7C-6F1064777C2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Infra", "Escola.Alf.Infra\Escola.Alf.Infra.csproj", "{2D3200F8-DAC0-4F0A-BA7C-6F1064777C2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Testes", "5. Testes", "{4846FDE5-6863-4427-95CF-E45568BB5FEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escola.Alf.Testes", "Escola.Alf.Testes\Escola.Alf.Testes.csproj", "{67A28754-D903-43DC-8516-357766A5C7AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Alf.Testes", "Escola.Alf.Testes\Escola.Alf.Testes.csproj", "{67A28754-D903-43DC-8516-357766A5C7AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
