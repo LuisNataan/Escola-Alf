@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace Escola.Alf.Application.Interfaces
 {
-    public interface IProfessorRepository : IGenericRepository<Professor>
+    public interface IAlunoRepository : IGenericRepository<Aluno>
     {
-        Task<bool> VerificarProfessor(int id);
+        Task<bool> VerificarAluno(int id);
     }
 }

@@ -10,7 +10,7 @@ namespace Escola.Alf.Application
         {
         }
 
-        public DbSet<Professor> Professores { get; set; }
+        public DbSet<Aluno> Professores { get; set; }
 
         public MainContext()
         {

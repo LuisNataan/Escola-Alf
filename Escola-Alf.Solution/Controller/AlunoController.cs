@@ -3,8 +3,8 @@
 namespace Escola.Alf.Solution.Controller
 {
     [ApiController]
-    [Route("api/professor")]
-    public class ProfessorController : ControllerBase
+    [Route("api/aluno")]
+    public class AlunoController : ControllerBase
     {
 
     }

@@ -23,8 +23,8 @@ namespace Escola.Alf.Solution
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddScoped<IProfessorService, ProfessorService>();
-            services.AddScoped<IProfessorRepository, ProfessorRepository>();
+            services.AddScoped<IAlunoService, AlunoService>();
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
 
             AddDbContextCollection(services);
             services.AddControllers();

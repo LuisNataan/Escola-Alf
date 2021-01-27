@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Escola.Alf.Infra.Repositories
 {
-    public class ProfessorRepository : GenericRepository<Professor>, IProfessorRepository
+    public class AlunoRepository : GenericRepository<Aluno>, IAlunoRepository
     {
-        public ProfessorRepository(MainContext context) : base(context)
+        public AlunoRepository(MainContext context) : base(context)
         {
         }
 
-        public override async Task<Professor> GetById(int id)
+        public override async Task<Aluno> GetById(int id)
         {
             return await _dbSet.Include(p => p.Prova)
                 .FirstOrDefaultAsync(p => p.Id == id && !p.Deletado);
         }
 
-        public async Task<bool> VerificarProfessor(int id)
+        public async Task<bool> VerificarAluno(int id)
         {
             return await Query().AnyAsync(p => p.Id == id && !p.Deletado);
         }

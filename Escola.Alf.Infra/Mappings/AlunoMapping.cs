@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Escola.Alf.Infra.Mappings
 {
-    public class ProfessorMapping : IEntityTypeConfiguration<Professor>
+    public class AlunoMapping : IEntityTypeConfiguration<Aluno>
     {
-        public void Configure(EntityTypeBuilder<Professor> builder)
+        public void Configure(EntityTypeBuilder<Aluno> builder)
         {
-            builder.ToTable("Professores");
+            builder.ToTable("Alunos");
 
             builder.Property(p => p.Nome)
                 .HasMaxLength(50)
@@ -18,8 +18,8 @@ namespace Escola.Alf.Infra.Mappings
                 .HasMaxLength(60)
                 .IsRequired();
 
-            builder.Property(p => p.Disciplina)
-                .HasMaxLength(30)
+            builder.Property(p => p.DataNascimento)
+                .HasColumnName("Data de Nascimento")
                 .IsRequired();
         }
     }
