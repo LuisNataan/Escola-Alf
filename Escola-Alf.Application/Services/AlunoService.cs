@@ -2,6 +2,7 @@
 using Escola.Alf.Application.Model.Aluno;
 using Escola.Alf.Domain.Entities;
 using Escola.Alf.Domain.VO;
+using System;
 using System.Threading.Tasks;
 
 namespace Escola.Alf.Application.Services
@@ -25,24 +26,64 @@ namespace Escola.Alf.Application.Services
             };
             var aluno = new Aluno(alunoVO);
 
+            aluno.Validar();
+
+            bool alunoVerficado = await _alunoRepository.VerificarAluno(aluno.Id);
+            if (alunoVerficado)
+            {
+                throw new ArgumentException("Aluno já cadastrado.");
+            }
+
             await _alunoRepository.Create(aluno);
             await _alunoRepository.SaveChanges();
             return aluno.Id;
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new System.NotImplementedException();
+            var aluno = await _alunoRepository.GetById(id);
+            if (aluno == null)
+            {
+                throw new ArgumentException("Id inválido.");
+            }
+
+            aluno.Inativar();
+            await _alunoRepository.Delete(aluno);
+            await _alunoRepository.SaveChanges();
         }
 
-        public Task<AlunoResponseModel> GetById(int id)
+        public async Task<AlunoResponseModel> GetById(int id)
         {
-            throw new System.NotImplementedException();
+            var aluno = await _alunoRepository.GetById(id);
+            if (aluno == null)
+            {
+                throw new ArgumentException("Id inválido.");
+            }
+
+            return new AlunoResponseModel(aluno);
         }
 
-        public Task Update(int id, AlunoRequestModel request)
+        public async Task Update(int id, AlunoRequestModel request)
         {
-            throw new System.NotImplementedException();
+            var aluno = await _alunoRepository.GetById(id);
+
+            if (aluno == null)
+            {
+                throw new ArgumentException("Id inválido.");
+            }
+
+            var alunoRequest = new AlunoVO
+            {
+                Nome = request.Nome,
+                Email = request.Email,
+                DataNascimento = request.DataNascimento
+            };
+
+            aluno.Atualizar(alunoRequest);
+            aluno.Validar();
+
+            await _alunoRepository.Update(aluno);
+            await _alunoRepository.SaveChanges();
         }
     }
 }

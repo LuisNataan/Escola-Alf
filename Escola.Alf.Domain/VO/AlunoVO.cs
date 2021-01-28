@@ -7,5 +7,6 @@ namespace Escola.Alf.Domain.VO
         public string Nome { get; set; }
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
+        public int ProvaId { get; set; }
     }
 }
