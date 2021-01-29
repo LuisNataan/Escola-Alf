@@ -10,6 +10,11 @@
             Nome = aluno.Nome;
             Email = aluno.Email;
             DataNascimento = aluno.DataNascimento;
+            Aprovado = aluno.Aprovado;
+            Prova = new ProvaModel
+            {
+                Nota = aluno.Prova.Nota
+            };
         }
     }
 }

@@ -3,6 +3,7 @@ using Escola.Alf.Domain.Validation;
 using Escola.Alf.Domain.VO;
 using FluentValidation;
 using System;
+using System.Collections.Generic;
 
 namespace Escola.Alf.Domain.Entities
 {
@@ -10,10 +11,11 @@ namespace Escola.Alf.Domain.Entities
     {
         public string Nome { get; protected set; }
         public string Email { get; protected set; }
-        public DateTime DataNascimento { get; protected set; }
+        public string DataNascimento { get; protected set; }
         public virtual Prova Prova { get; protected set; }
         public int ProvaId { get; protected set; }
         public bool Aprovado { get; protected set; }
+        public List<Questao> Respostas { get; protected set; }
 
         public Aluno(AlunoVO alunoVO)
         {
@@ -21,6 +23,7 @@ namespace Escola.Alf.Domain.Entities
             Email = alunoVO.Email;
             DataNascimento = alunoVO.DataNascimento;
             ProvaId = alunoVO.ProvaId;
+            Prova = new Prova(alunoVO);
         }
 
         protected Aluno()

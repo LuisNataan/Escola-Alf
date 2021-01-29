@@ -76,7 +76,8 @@ namespace Escola.Alf.Application.Services
             {
                 Nome = request.Nome,
                 Email = request.Email,
-                DataNascimento = request.DataNascimento
+                DataNascimento = request.DataNascimento,
+                Nota = request.Prova.Nota
             };
 
             aluno.Atualizar(alunoRequest);

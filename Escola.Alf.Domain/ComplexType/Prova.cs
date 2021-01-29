@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Escola.Alf.Domain.VO;
+using System.Collections.Generic;
 
 namespace Escola.Alf.Domain.ComplexType
 {
@@ -6,6 +7,17 @@ namespace Escola.Alf.Domain.ComplexType
     {
         public List<Questao> Questoes { get; protected set; }
         public double Nota { get; protected set; }
+        public int AlunoId { get; protected set; }
+
+        public Prova(AlunoVO alunoVO)
+        {
+            Nota = alunoVO.Nota;
+        }
+
+        protected Prova()
+        {
+
+        }
 
         public void GetNota()
         {
@@ -17,5 +29,7 @@ namespace Escola.Alf.Domain.ComplexType
 
             Nota = pontuacaoTotal / totalPeso;
         }
+        
+        //TODO: Método para aplicar a prova.
     }
 }
