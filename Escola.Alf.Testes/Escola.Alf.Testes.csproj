@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Unit\Application\" />
-    <Folder Include="Unit\Web\" />
   </ItemGroup>
 
   <ItemGroup>
